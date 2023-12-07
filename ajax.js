@@ -36,3 +36,7 @@ function confirmRemove($id) {
     }
 }
 
+function confirmEdit() {
+    window.confirm("Edit product success");
+}
+

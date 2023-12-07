@@ -60,7 +60,7 @@
 
     <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <form action="editProduct.php" method="post" enctype="multipart/form-data">
+            <form action="index.php?page=products" method="post" enctype="multipart/form-data">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Edit product</h5>
@@ -91,7 +91,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" name='editProduct'>Edit</button>
+                        <button type="submit" class="btn btn-primary" name='editProduct' onclick="confirmEdit()">Edit</button>
 
                     </div>
                 </div>
@@ -116,13 +116,11 @@
     </table>
     <script src="ajax.js"></script>
 
-    <!-- <script>
-        function confirmRemove($id) {
-            if (confirm("Are you sure to delete this item ?")) {
-                window.location.href = "delProduct.php?remove=" + $id;
-            }
+    <script>
+        function confirmEdit() {
+            window.alert("Edit product success");
         }
-    </script> -->
+    </script>
 </div>
 
 <?php
@@ -151,6 +149,7 @@ $('#editModal').modal('show')
     $result->close();
 }
 $conn->close();
+
 
 
 ?>

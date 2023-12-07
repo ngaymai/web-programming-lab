@@ -129,7 +129,6 @@
 include("db_conn.php");
 $fetch_src = FETCH_SRC;
 if (isset($_GET["edit"])) {
-    echo "hello";
     $id = $_GET['edit'];
 
     $query = "select * from products where productID = $id";
